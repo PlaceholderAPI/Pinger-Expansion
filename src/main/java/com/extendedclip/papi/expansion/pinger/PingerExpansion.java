@@ -294,7 +294,7 @@ public class PingerExpansion extends PlaceholderExpansion implements Cacheable, 
                     return false;
                 }
                 String string = new String(chars);
-                if (string.startsWith("&")) {
+                if (string.startsWith("§")) {
                     String[] data = string.split("\000");
                     setPingVersion(Integer.parseInt(data[0].substring(1)));
                     setProtocolVersion(Integer.parseInt(data[1]));
@@ -303,7 +303,7 @@ public class PingerExpansion extends PlaceholderExpansion implements Cacheable, 
                     setPlayersOnline(Integer.parseInt(data[4]));
                     setMaxPlayers(Integer.parseInt(data[5]));
                 } else {
-                    String[] data = string.split("&");
+                    String[] data = string.split("§");
                     setMotd(data[0]);
                     setPlayersOnline(Integer.parseInt(data[1]));
                     setMaxPlayers(Integer.parseInt(data[2]));
